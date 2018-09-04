@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
+        <link rel="stylesheet" href="css/font-awesome.css" type="text/css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+        <style>
+
+            .container-fluid {
+
+                border-radius: 5px;
+                background-color: #f2f2f2;
+                padding: 20px 0 30px 0;
+                text-align: left;
+            }  
+            .col-sm-8{
+                margin: 15px;
+                font-size: 18px;
+            }
+            div{
+                margin: 15px;
+                padding: 10px;
+            }
+            label{
+                width: 150px;
+            }
+            input{
+                border:1px solid #626D71 ;
+                padding: 8px;
+                border-radius: 5px;
+            }
+            .blue{
+                background-color: #ccc;
+            }
+            .red{
+                color: white;
+                padding: 10px;
+                background-color: red;
+            }
+            .orange{
+                color: white;
+                padding: 10px;
+                background-color: orange;
+            }
+            .green{
+                color: whitesmoke;
+                padding: 10px;
+                background-color: green;
+            }
+        </style>
+
+        <script>
+            $(document).ready(function () {
+                $(':input').click(function () {
+                    $(this).addClass('blue');
+                });
+            });
+        </script>  
+        <script>
+            $(document).ready(function () {
+                $('#status').keyup(function () {
+                    var len = $('#status').val().length;
+                    if(len<1){
+                        $('.first').text('');
+                        $('.first').removeClass('red');
+                        $('.first').removeClass('orange');
+                        $('.first').removeClass('green');
+                    } else {
+                    if (len <= 4) {
+                        $('.first').text('weak');
+                        $('.first').addClass('red');
+                         $('.first').removeClass('orange');
+                        $('.first').removeClass('green');
+                    } else {
+                        if (len <= 8) {
+                            $('.first').text('Good');
+                            $('.first').addClass('orange');
+                            $('.first').removeClass('red');
+                            $('.first').removeClass('green');
+                        } else {
+                            $('.first').text('strong');
+                            $('.first').addClass('green');
+                            $('.first').removeClass('red');
+                            $('.first').removeClass('orange');
+                        }
+                    }
+                }
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="row"> 
+                <div class="col-sm-2">
+
+                </div>
+                <div class="col-sm-8">
+                    <h1>Form Submit</h1>
+                    <form action="/action_page.php">
+                        <div>
+                            <label for="email">E-Mail:</label>
+                            <Input type="email" name="email" id="email" placeholder="Enter E-mail" > 
+                        </div>
+                        <div>
+                            <label for="pwd">Password:  </label>
+                            <Input type="password" name="pswd" id="status"  placeholder="Enter-Passward"><span class="first"></span>
+                        </div>
+                        <div class="form-check">
+                            <label class="form-check-label">
+                                <input class="form-check-input" type="checkbox" name="remember"> Remember me
+                            </label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+                <div class="col-sm-2">
+                </div>
+            </div>
+        </div>
+        <script src="js/jquery-3.2.1.js"></script>
+        <script src="js/bootstrap.js"></script>
+    </body>
+</html>

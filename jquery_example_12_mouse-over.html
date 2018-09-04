@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
+        <link rel="stylesheet" href="css/font-awesome.css" type="text/css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+        <style>
+
+            .container-fluid {
+
+                border-radius: 5px;
+                background-color: #FEF3E2;
+                padding: 10px 0 20px 0;
+                text-align: left;
+                color:#752A07;
+            }  
+            .col-sm-8{
+                margin: 15px;
+                font-size: 18px;
+            }
+            div{
+                margin: 15px;
+                padding: 10px;
+            }
+            .box{
+                width:300px ;
+                height: 150px;
+                background-color:#FA4032 ;
+/*                display: none;*/
+            }
+            input{
+                border-color: #FA812F;
+                background-color: #FA812F;
+                border-radius: 5px;
+            }
+        </style>
+
+        <script>
+            $(document).ready(function () {
+                $('#show').mouseover(function (){
+                $('#show').val('Put Your mouse back to hide it');    
+                $('.box').show(1000);
+               });
+               
+                $('#show').mouseout(function (){
+                 $('#show').val('Hover Here to show');   
+                 $('.box').hide(1000);
+                });
+                });
+        </script>
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="row"> 
+                <div class="col-sm-2">
+
+                </div>
+                <div class="col-sm-8">
+                    <h1>Mouse Over and Mouse Out</h1>
+                    <input type="button" value="Hover Here to Show" id="show">
+                    <div class="box"></div>
+                </div>
+                <div class="col-sm-2">
+                </div>
+            </div>
+        </div>
+        <script src="js/jquery-3.2.1.js"></script>
+        <script src="js/bootstrap.js"></script>
+    </body>
+</html>

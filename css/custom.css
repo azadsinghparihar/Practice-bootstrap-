@@ -1,0 +1,30 @@
+#myHeader{
+/*    height:80px;*/
+    background-color: whitesmoke;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+#heading{
+    font-size: 200%;
+    color:orange;
+}
+h1{
+    color:red;
+    font-weight: bold;
+
+}
+table{
+    width: 100%;
+
+}
+h2{
+    text-align:center;
+    background-color: whitesmoke;
+}
+th{
+    table:hover;
+}
+img{
+    margin-left: 5px;
+
+}

@@ -1,0 +1,8 @@
+.myNavBar{
+    background-color: #dff0d8;
+}
+.myTable > tbody > tr:nth-of-type(odd) {
+  background-color: #c4e3f3;
+  table-width:100%;
+}
+

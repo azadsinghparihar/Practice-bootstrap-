@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
+        <link rel="stylesheet" href="css/font-awesome.css" type="text/css">
+        <link href="css/jquery-ui.css" rel="stylesheet" type="text/css"/>
+        <link href="css/jquery-ui.structure.css" rel="stylesheet" type="text/css"/>
+        <link href="css/jquery-ui.theme.css" rel="stylesheet" type="text/css"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+        <style>
+
+            .container-fluid {
+
+                border-radius: 5px;
+                background-color: #FEF3E2;
+                padding: 10px 0 20px 0;
+                text-align: left;
+
+            }  
+            .col-sm-8{
+                margin: 15px;
+                font-size: 18px;
+            }
+
+            .one{
+                width: 100px;
+                background-color: #FA812F ;
+                color:white;
+                padding: 10px;
+                border-radius: 5px;               
+            }
+
+            .one>a{
+                color:white;
+                text-decoration: none;
+                text-align: center;
+                font-size: 15px;
+            }
+            #van{
+                background-color: #FAAF08 ; 
+            }
+            #two{
+                background-color: #FA4032 ;
+            }
+            #three{
+                background-color: #F4EC6A;
+            }
+            #four{
+                background-color: #BBCF4A ;
+            }
+            #five{
+                background-color: #E73FOB ;
+            }
+
+
+            input{
+                margin: 10px;
+                border-radius: 5px;
+                background-color: #BBCF4A;
+                border: none;
+                color: white;
+                padding: 8px 8px;
+            }
+
+            #accord{
+                width: 300px;
+                background-color: #E73FOB ;
+            }
+            #accord h2{
+                background-color: #E73FOB ;
+                color: white
+            }
+            .ui-tooltip{
+                background:#BBCF4A;
+                color:white;
+            }
+            
+            .user-info{
+                margin-top: 20px;
+            }
+            .ui-widget-content{
+                background:#BBCF4A;
+                border: #BBCF4A;
+            }
+        </style>
+
+        <script>
+            // Navigation bar Animation //
+            $(document).ready(function () {
+                $('.one').mouseover(function () {
+                    $(this).stop().animate({width: '150px'});
+
+                });
+                $('.one').mouseout(function () {
+                    $(this).stop().animate({width: '100px'});
+                });
+            });
+
+            // jquery ui  //
+            $(document).ready(function (){
+                $('#accord').accordion({
+                    event:"mouseover",
+                    active:3
+                });
+            });
+
+            //Tooltip//
+            
+            $(document).ready(function(){
+                $('#tltip').tooltip({
+                    show:'fade',
+                    hide:'explode'
+                });
+            });
+
+
+        </script>
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="row"> 
+                <div class="col-sm-2">
+                    <p  class="one" id="van"><a  href="">Home</a></p>
+                    <p  class="one" id="two" ><a  href="">About</a></p>
+                    <p  class="one" id="three"><a href="">Blog</a></p>
+                    <p  class="one" id="four"><a href="">Projects</a></p>
+                    <p  class="one" id="five"><a href="">Contact</a></p>
+                </div>
+                <div class="col-sm-6">
+                    <div id="accord">
+                        <h2>1</h2>
+                        <div>Azad singh parihar</div>
+                        <h2>2</h2>
+                        <div>Amogh Joshi</div>
+                        <h2>3</h2>
+                        <div>Mani Malhotra</div>
+                        <h2>4</h2>
+                        <div>Prashant Bajpai</div>
+                        <h2>5</h2>
+                        <div>Varnika Bajpai</div>
+                    </div>
+                </div>
+                <div class="col-sm-4 user-info">
+                    <a href="#" title="I want to give some information" id="tltip">Hover Me</a>
+                </div>
+            </div>
+
+
+        </div>
+        <script src="js/jquery-3.2.1.js"></script>
+        <script src="js/jquery-ui.min.js" type="text/javascript"></script>
+        <script src="js/bootstrap.js"></script>
+    </body>
+</html>

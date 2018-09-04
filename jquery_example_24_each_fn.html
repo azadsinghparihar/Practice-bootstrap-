@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
+        <link rel="stylesheet" href="css/font-awesome.css" type="text/css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+        <style>
+
+            .container-fluid {
+
+                border-radius: 5px;
+                background-color: #FEF3E2;
+                padding: 10px 0 20px 0;
+                text-align: left;
+
+            }  
+            .col-sm-8{
+                margin: 15px;
+                font-size: 18px;
+            }
+
+            .one{
+                width: 100px;
+                background-color: #FA812F ;
+                color:white;
+                padding: 10px;
+                border-radius: 5px;               
+            }
+
+            a{
+                color:white;
+                text-decoration: none;
+                text-align: center;
+                font-size: 15px;
+            }
+            #van{
+                background-color: #FAAF08 ; 
+            }
+            #two{
+                background-color: #FA4032 ;
+            }
+            #three{
+                background-color: #F4EC6A;
+            }
+            #four{
+                background-color: #BBCF4A ;
+            }
+            #five{
+                background-color: #E73FOB ;
+            }
+
+
+            input{
+                margin: 10px;
+                border-radius: 5px;
+                background-color: #BBCF4A;
+                border: none;
+                color: white;
+                padding: 8px 8px;
+            }
+
+            .alerting{
+
+            }
+
+        </style>
+
+        <script>
+            // Navigation bar Animation //
+            $(document).ready(function () {
+                $('.one').mouseover(function () {
+                    $(this).stop().animate({width: '150px'});
+
+                });
+                $('.one').mouseout(function () {
+                    $(this).stop().animate({width: '100px'});
+                });
+            });
+
+            // jquery Each function //
+
+            $(document).ready(function () {
+                $('li.alerting').each(function () {
+                    alert($(this).text().length);
+                });
+            });
+
+            // jquery Load function //
+
+            $(document).ready(function () {
+                $('#btn').click(function () {
+                    $('#extcontent').load('Template_architectural.html');
+                });
+            });
+
+
+
+        </script>
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="row"> 
+                <div class="col-sm-2">
+                    <p  class="one" id="van"><a  href="">Home</a></p>
+                    <p  class="one" id="two" ><a  href="">About</a></p>
+                    <p  class="one" id="three"><a href="">Blog</a></p>
+                    <p  class="one" id="four"><a href="">Projects</a></p>
+                    <p  class="one" id="five"><a href="">Contact</a></p>
+                </div>
+                <div class="col-sm-6">
+                    <h3>Each function</h3>
+                    <ul>
+                        <li class="alerting">First</li>
+                        <li class="alerting">Second</li>
+                        <li class="alerting">Third</li>
+                        <li>Fourth</li>
+                        <li>Fifth</li>
+                    </ul>
+                </div>
+                <div class="col-sm-4 user-info">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-12">
+                    <input type="button" value="Load it" id="btn">
+                    <div id="extcontent"></div>
+                </div>
+            </div>
+        </div>
+        <script src="js/jquery-3.2.1.js"></script>
+        <script src="js/bootstrap.js"></script>
+    </body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
+        <link rel="stylesheet" href="css/font-awesome.css" type="text/css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+        <style>
+
+            .container-fluid {
+                position: relative;
+                border-radius: 5px;
+                background-color: #f2f2f2;
+                padding: 20px 0 30px 0;
+                text-align: center;
+            }  
+            .fb {
+                background-color: #3B5998;
+                color: white;
+                font-size: 17px;
+                line-height: 20px;
+            }
+
+            .twitter {
+                background-color: #55ACEE;
+                color: white;
+                font-size: 17px;
+                line-height: 20px;
+            }
+
+            .google {
+                background-color: #dd4b39;
+                color: white;
+                font-size: 17px;
+                line-height: 20px;
+            }
+            .whatsapp {
+                background-color: #67b168;
+                color: white;
+                font-size: 17px;
+                line-height: 20px;
+            }
+            a{
+                margin: 25px; 
+                width: 45%;
+                font-size:20px;
+                
+            }
+            .boxshadow {
+                color: white;
+                text-shadow: 2px 2px 4px #000000;
+            }
+            li{
+                list-style-type: none;
+            }
+            p{
+                display: none;
+                text-align: left;
+            }
+            .col-sm-2{
+                margin-top: 25px;
+            }
+        </style>
+
+        <script>
+            $(document).ready(function () {
+                $('#show').click(function () {
+                    $("p:contains(Rishab)").show();
+                });
+            });
+        
+                $(document).ready(function(){
+                    $('a[title^=se]').fadeOut(8000);
+                });
+                $(document).ready(function(){
+                    $('a[title$=t]').fadeOut(8000);
+                });
+                
+        
+            $(document).ready(function(){
+                $('img[width=100]').fadeOut(2000);
+            });
+        </script>
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="row"> 
+                <div class="col-sm-2">
+                         <a href="#" title="home" >Home</a>
+                        <a href="#" >About</a>
+                        <a href="#" title="services" >Services</a>
+                        <a href="#" title="contact" >contact us</a>
+                    </div>
+                    <div class="col-sm-8">
+                        
+                        <h1>Login with Social Media or Manually</h1>
+                        <ul>
+                            <li>
+                                <a href="#" class="fb btn">
+                                    <i class="fa fa-facebook-official"></i> Login with Facebook
+                                </a><br/>
+                            </li>
+                            <li>
+                                <a href="#" class="twitter btn">
+                                    <i class="fa fa-twitter fa-fw"></i> Login with Twitter
+                                </a><br/>
+                            </li>
+                        </ul>
+
+                    </div>
+                    <div class="col-sm-2">
+                        <div>
+                            <input type="button" value="Show Value" id="show">
+                            <p><b>101 MCA Rishab Tiwari</b></p>
+                            <p><b>102 MCA Saurabh</b></p>
+                            <p><b>103 BCA Vaibhav</b></p>
+                            <p><b>104 PGDCA Vibhore</b></p>
+                            <p><b>105 DCA Prabhav</b></p>
+                            <p><b>110 MCA Abhineel</b></p>
+                            <p><b>112 BCA Vivek</b></p>
+                            <p><b>114 MCA Rishab Sharma</b></p>
+                            <p><b>201 MCA Rishab Malhotra</b></p>
+                            <p><b>121 MCA Rishab Jain</b></p>
+                            <p><b> 508 MCA Rishab Joshi</b></p>
+                        </div>
+                 </div>
+            </div>
+            <div class="row">
+                
+                <div class="col-sm-10-offset-1 ">
+                    <img src="images/Logo_of_RSS_2.png" alt="" width="200"/>
+                    <img src="images/Logo_of_RSS_2.png" alt="" width="100"/>
+                </div>
+            </div>
+        </div>
+        <script src="js/jquery-3.2.1.js"></script>
+        <script src="js/bootstrap.js"></script>
+    </body>
+</html>

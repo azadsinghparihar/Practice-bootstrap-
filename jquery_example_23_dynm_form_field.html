@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
+        <link rel="stylesheet" href="css/font-awesome.css" type="text/css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+        <style>
+
+            .container-fluid {
+
+                border-radius: 5px;
+                background-color: #FEF3E2;
+                padding: 10px 0 20px 0;
+                text-align: left;
+
+            }  
+            .col-sm-8{
+                margin: 15px;
+                font-size: 18px;
+            }
+            div{
+                /*                margin: 15px;
+                                padding: 10px;*/
+            }
+            .one{
+                width: 100px;
+                background-color: #FA812F ;
+                color:white;
+                padding: 10px;
+                border-radius: 5px;               
+            }
+
+            a{
+                color:white;
+                text-decoration: none;
+                text-align: center;
+                font-size: 15px;
+            }
+            #van{
+                background-color: #FAAF08 ; 
+            }
+            #two{
+                background-color: #FA4032 ;
+            }
+            #three{
+                background-color: #F4EC6A;
+            }
+            #four{
+                background-color: #BBCF4A ;
+            }
+            #five{
+                background-color: #E73FOB ;
+            }
+
+            .square{
+                width:350px;
+                height:200px;
+                background-color: #BBCF4A ;
+                border-radius: 5px;
+            }
+            .rectangle{
+                margin-top: 25px;
+                width:250px;
+                height:180px;
+                background-color: #FA4032 ; 
+                color: white;
+                text-align: center;
+                border-radius: 5px;
+            }
+            h1{
+                padding: 15px;
+            }
+            input{
+                margin: 10px;
+                border-radius: 5px;
+                background-color: #BBCF4A;
+                border: none;
+                color: white;
+                padding: 8px 8px;
+            }
+            .error{
+                color:red;
+            }
+            .user-info{
+                margin-top: 15px;
+            }
+            .text-box{
+                padding: 8px;
+                border:1px #FA4032;
+                border-radius: 5px;
+                background-color: #FAAF08;
+            }
+        </style>
+
+        <script>
+            $(document).ready(function () {
+                $('.one').mouseover(function () {
+                    $(this).stop().animate({width: '150px'});
+
+                });
+                $('.one').mouseout(function () {
+                    $(this).stop().animate({width: '100px'});
+                });
+            });
+
+            $(document).ready(function () {
+                $('#slideme').click(function () {
+                    $('.square').slideUp(4000);
+                });
+
+                $('#stopme').click(function () {
+                    $('.square').stop();
+                });
+            });
+
+            $(document).ready(function () {
+                $('.rectangle').delay(3000).fadeOut(1000);
+            });
+
+
+
+            //Dynamic Form Field//
+
+            $(document).ready(function () {
+                $('#btn2').click(function () {
+                    var label = prompt("Enter Label");
+                    var type = prompt("Enter input type");
+                    if (label && type)
+                    {
+                        $('p.info').append("<p>" + label + " " + "<input type='" + type + "' />" + "</p>");
+                    }
+                });
+            });
+
+            //Change Text//
+            $(document).ready(function () {
+                $('#btn3').click(function () {
+                    $('p.txt').text("This text is coming from jquery file");
+                });
+            });
+
+            //Insert Html //
+
+            $(document).ready(function () {
+                $('#btn4').click(function () {
+                    $('p.pic').html("<img src='images/04.jpg'/ width='90%'>");
+                });
+            });
+
+            //jquery Form Validation//
+
+            $(document).ready(function () {
+                $('#btn5').click(function () {
+                    var username = $('#user').val();
+                    var password = $('#pass').val();
+
+                    if (username == "")
+                    {
+                        $('.error').text("Please enter username");
+                    } else if (password == "")
+                    {
+                        $('.error').text("Please enter password");
+                    }
+                });
+            });
+
+            //jquery Find property//
+
+            $(document).ready(function () {
+                $('.text-box').find('h2').css({"background": "#F4EC6A",
+                    "padding": "10px",
+
+                });
+            });
+
+        </script>
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="row"> 
+                <div class="col-sm-2">
+                    <p  class="one" id="van"><a  href="">Home</a></p>
+                    <p  class="one" id="two" ><a  href="">About</a></p>
+                    <p  class="one" id="three"><a href="">Blog</a></p>
+                    <p  class="one" id="four"><a href="">Projects</a></p>
+                    <p  class="one" id="five"><a href="">Contact</a></p>
+                </div>
+                <div class="col-sm-6">
+                    <input type="button" value="Slide up" id="slideme">
+                    <input type="button" value="Stop" id="stopme">
+                    <div class="square"></div>
+                </div>
+                <div class="col-sm-4 user-info">
+
+                    <div class="rectangle"><h1> Login Here</h1></div>
+                    <p>User Name <input type="text" name="usr" id="user"/></p>
+                    <p>Password <input type="password" name="pwd" id="pass"/></p>
+                    <p><input type="button" value="submit" id="btn5"></p>
+                    <p class="error"></p>
+                </div>
+            </div>
+            <div class="row"> 
+                <div class="col-sm-2">
+
+                </div>
+                <div class="col-sm-6 form-one">
+                    <h2>Form Field</h2>
+                    <input type="button" value="Add Field" id="btn2">
+                    <p class="info">Username <input type="text" name="First Name" id="fname"></p>
+                    <div class="text-box">
+                        <h1>This is heading 1</h1>
+                        <h2>This is Heading 2</h2>
+                        <p class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>  
+
+                </div>
+                <div class="col-sm-4">
+                    <P class="txt"></P>
+                    <input type="button" value="Change Text" id="btn3">
+
+                    <p class="pic">This is the content</p>
+                    <input type="button" value="click me" id="btn4">
+                </div>
+            </div>
+        </div>
+        <script src="js/jquery-3.2.1.js"></script>
+        <script src="js/bootstrap.js"></script>
+    </body>
+</html>

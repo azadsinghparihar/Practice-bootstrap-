@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
+        <link rel="stylesheet" href="css/font-awesome.css" type="text/css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+        <style>
+
+            .container-fluid {
+
+                border-radius: 5px;
+                background-color: #FEF3E2;
+                padding: 10px 0 20px 0;
+                text-align: left;
+
+            }  
+            .col-sm-8{
+                margin: 15px;
+                font-size: 18px;
+            }
+            div{
+                /*                margin: 15px;
+                                padding: 10px;*/
+            }
+            .one{
+                width: 100px;
+                background-color: #FA812F ;
+                color:white;
+                padding: 10px;
+                border-radius: 5px;               
+            }
+
+            a{
+                color:white;
+                text-decoration: none;
+                text-align: center;
+                font-size: 15px;
+            }
+            #van{
+                background-color: #FAAF08 ; 
+            }
+            #two{
+                background-color: #FA4032 ;
+            }
+            #three{
+                background-color: #F4EC6A;
+            }
+            #four{
+                background-color: #BBCF4A ;
+            }
+            #five{
+                background-color: #E73FOB ;
+            }
+
+            .square{
+                width:350px;
+                height:200px;
+                background-color: #BBCF4A ;
+                border-radius: 5px;
+            }
+            .rectangle{
+                margin-top: 25px;
+                width:250px;
+                height:180px;
+                background-color: #FA4032 ; 
+                color: white;
+                text-align: center;
+                border-radius: 5px;
+            }
+            h1{
+                padding: 15px;
+            }
+            .apnd{
+                
+            }
+        </style>
+
+        <script>
+            $(document).ready(function () {
+                $('.one').mouseover(function () {
+                    $(this).stop().animate({width: '150px'});
+
+                });
+                $('.one').mouseout(function () {
+                    $(this).stop().animate({width: '100px'});
+                });
+            });
+            
+            $(document).ready(function(){
+                $('#slideme').click(function(){
+                $('.square').slideUp(4000);    
+                });
+                
+                $('#stopme').click(function(){
+                $('.square').stop();    
+                });
+            });
+            
+            $(document).ready(function(){
+               $('.rectangle').delay(3000).fadeOut(1000); 
+            });
+            
+            $(document).ready(function(){
+             $('#btn').click(function(){
+             $('h4.apnd').prepend("This is the content which i want to append") ;   
+             });   
+            });
+        </script>
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="row"> 
+                <div class="col-sm-2">
+                    <p  class="one" id="van"><a  href="">Home</a></p>
+                    <p  class="one" id="two" ><a  href="">About</a></p>
+                    <p  class="one" id="three"><a href="">Blog</a></p>
+                    <p  class="one" id="four"><a href="">Projects</a></p>
+                    <p  class="one" id="five"><a href="">Contact</a></p>
+                </div>
+                <div class="col-sm-6">
+                    <input type="button" value="Slide up" id="slideme">
+                    <input type="button" value="Stop" id="stopme">
+                    <div class="square"></div>
+                </div>
+                <div class="col-sm-4">
+                    
+                    <div class="rectangle"><h1> I will disappear soon.</h1></div>
+                    <div>
+                        <input type="button" value="append " id="btn">
+                        <h4>This is first paragraph</h4>
+                        <h4 class="apnd">This is Second paragraph</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="js/jquery-3.2.1.js"></script>
+        <script src="js/bootstrap.js"></script>
+    </body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
+        <link rel="stylesheet" href="css/font-awesome.css" type="text/css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+        <style>
+
+            .container-fluid {
+
+                border-radius: 5px;
+                background-color: #B9D9C3;
+                padding: 20px 0 30px 0;
+                text-align: left;
+                color:#752A07;
+            }  
+            .col-sm-8{
+                margin: 15px;
+                font-size: 18px;
+            }
+            div{
+                margin: 15px;
+                padding: 10px;
+            }
+            label{
+                width: 150px;
+            }
+            input{
+                border:1px solid #626D71 ;
+                padding: 8px;
+                border-radius: 5px;
+            }
+            .color{
+                background-color:#FFCCAC ;
+                color:white;
+            }
+            .btn-primary{
+                background-color:#EB5E30 ;
+                border-color: #EB5E30;
+            }
+        </style>
+
+        <script>
+            $(document).ready(function () {
+                $('input').focusin(function () {
+                $(this).addClass('color');
+                });
+                
+                $(':input').focusout(function(){
+                    $(this).removeClass('color');
+                });
+
+                $('#email').focusin(function () {
+                $('.user').text('Enter Email');
+                });
+                
+                $('#email').focusout(function(){
+                $('.user').text('');    
+                });
+
+                $('#pwd').focusin(function () {
+                $('.pass').text('Enter Passward');
+                });
+
+                 $('#pwd').focusout(function(){
+                $('.pass').text('');    
+                });
+
+            });
+        </script>
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="row"> 
+                <div class="col-sm-2">
+
+                </div>
+                <div class="col-sm-8">
+                    <h1>Form Submit</h1>
+                    <form action="/action_page.php">
+                        <div>
+                            <label for="email">E-Mail:</label>
+                            <Input type="email" name="email" id="email" placeholder="Enter E-mail" > <span class="user"></span>
+                        </div>
+                        <div>
+                            <label for="pwd">Password:  </label>
+                            <Input type="password" name="pswd" id="pwd"  placeholder="Enter-Passward"><span class="pass"></span>
+                        </div>
+
+                        <div>
+                            <label for="usr">First Name:  </label>
+                            <Input type="text" name="name" id="usr"  placeholder="First Name">
+                        </div>
+
+                        <div>
+                            <label for="usr">Last Name:  </label>
+                            <Input type="text" name="last name" id="usr"  placeholder="Last Name">
+                        </div>
+                        <div>
+                            <label >Organisation :  </label>
+                            <Input type="text" name="oraganisation" id="org"  placeholder="Organisation">
+                        </div>
+
+                        <div class="form-check">
+                            <label class="form-check-label">
+                                <input class="form-check-input" type="checkbox" name="remember"> Remember me
+                            </label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+                <div class="col-sm-2">
+                </div>
+            </div>
+        </div>
+        <script src="js/jquery-3.2.1.js"></script>
+        <script src="js/bootstrap.js"></script>
+    </body>
+</html>

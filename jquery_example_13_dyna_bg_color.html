@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
+        <link rel="stylesheet" href="css/font-awesome.css" type="text/css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+        <style>
+
+            .container-fluid {
+
+                border-radius: 5px;
+                background-color: #FEF3E2;
+                padding: 10px 0 20px 0;
+                text-align: left;
+                color:#752A07;
+            }  
+            .col-sm-8{
+                margin: 15px;
+                font-size: 18px;
+            }
+            div{
+                margin: 15px;
+                padding: 10px;
+            }
+            select{
+/*                padding: 8px;*/
+                border-radius: 6px;
+                border-color: 1px solid #EBDF00;
+            }
+        </style>
+
+        <script>
+            $(document).ready(function () {
+                 var color=$('#list').val();
+             $('body').css('background',color);
+             $('#list').change(function (){
+             var color=$('#list').val();
+             $('body').css('background',color);
+             });   
+    
+    
+    });
+        </script>
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="row"> 
+                <div class="col-sm-2">
+
+                </div>
+                <div class="col-sm-8">
+                    <select name="bg" id="list">
+                        <option value="#EBDF00">Yellow Pear</option>
+                        <option value="#7E7B15">Moss Green</option>
+                        <option value="#563E20">Umber</option>
+                        <option value="#EAD39C">Gold</option>
+                        <option value="#B38540">Parsnip</option>
+                    </select>
+                    
+                </div>
+                <div class="col-sm-2">
+                </div>
+            </div>
+        </div>
+        <script src="js/jquery-3.2.1.js"></script>
+        <script src="js/bootstrap.js"></script>
+    </body>
+</html>
